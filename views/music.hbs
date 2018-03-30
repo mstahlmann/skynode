@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SkyRhi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Site Description Here">
+        <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/flickity.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/jquery.steps.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/theme.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body class=" ">
+        <a id="start"></a>
+        {{>navbar}}
+        <div class="main-container">
+          <section class="imagebg videobg height-100 text-center" data-overlay="4">
+            <video autoplay loop muted>
+              <source src="video/videopage.mp4" type="video/mp4">
+            </video>
+            <div class="background-image-holder">
+              <img alt="image" src="img/fire.jpg" />
+            </div>
+            <div class="container pos-vertical-center">
+              <!-- <h3>Music Videos and other stuff..</h3> -->
+            </div>
+          </section>
+          <section>
+            <div class="container">
+                <div class="row">
+                    <div class="masonry">
+                        <div class="masonry-filter-container">
+                            <span>Category:</span>
+                            <div class="masonry-filter-holder">
+                                <div class="masonry__filters" data-filter-all-text="All Categories"></div>
+                            </div>
+                        </div>
+                        <!--end masonry filters-->
+                        <div class="masonry__container">
+                          {{{videos_list}}}
+                        </div>
+                        <!--end masonry container-->
+                    </div>
+                    <!--end masonry-->
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </section>
+        {{>footer}}
+        </div>
+        <!--<div class="loader"></div>-->
+        <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
+            <i class="stack-interface stack-up-open-big"></i>
+        </a>
+        <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="/js/flickity.min.js"></script>
+        <script type="text/javascript" src="/js/easypiechart.min.js"></script>
+        <script type="text/javascript" src="/js/parallax.js"></script>
+        <script type="text/javascript" src="/js/typed.min.js"></script>
+        <script type="text/javascript" src="/js/datepicker.js"></script>
+        <script type="text/javascript" src="/js/isotope.min.js"></script>
+        <script type="text/javascript" src="/js/ytplayer.min.js"></script>
+        <script type="text/javascript" src="/js/lightbox.min.js"></script>
+        <script type="text/javascript" src="/js/granim.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.steps.min.js"></script>
+        <script type="text/javascript" src="/js/countdown.min.js"></script>
+        <script type="text/javascript" src="/js/twitterfetcher.min.js"></script>
+        <script type="text/javascript" src="/js/spectragram.min.js"></script>
+        <script type="text/javascript" src="/js/smooth-scroll.min.js"></script>
+        <script type="text/javascript" src="/js/scripts.js"></script>
+    </body>
+</html>

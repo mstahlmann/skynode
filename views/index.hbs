@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SkyRhi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Site Description Here">
+        <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/flickity.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/jquery.steps.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/theme.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css/font-rubiklato.css" rel="stylesheet" type="text/html" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700%7CRubik:300,400,500" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body class=" ">
+        <a id="start"></a>
+        {{>navbar}}
+        <div class="main-container">
+            <section class="cover cover-fullscreen text-center height-100 imagebg parallax" data-overlay="3">
+                <div class="background-image-holder">
+                    <img alt="background" src="img/fire1.jpg" />
+                </div>
+                <div class="container pos-vertical-center">
+                    <div class="row">
+                        <div class="col-sm-10 col-md-8">
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+            <section class="text-center space--lg imagebg parallax" data-overlay="3">
+                <div class="background-image-holder">
+                    <img alt="background" src="/img/fire3.jpg" />
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-10 col-md-8">
+                            <div class="heading-block">
+                                <h3 class="type--uppercase">Recent Music</h3>
+                            </div>
+                            <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/46062221&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+                            <a class="btn btn--icon type--uppercase mt--2" href="https://soundcloud.com/skyrhi">
+                                <span class="btn__text">
+                                    <i class="socicon-soundcloud"></i>
+                                    More On Soundcloud
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+
+            <section class="text-center space--lg parallax imagebg" data-overlay="3">
+                <div class="background-image-holder">
+                    <img alt="background" src="/img/fire4.jpg" />
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-9 col-md-7">
+                            <div class="tweets-feed slider text-center" data-feed-name="skyrhi" data-amount="5" data-paging="true"></div>
+                        </div>
+                    </div>
+                    <!--end row-->
+                </div>
+                <!--end of container-->
+            </section>
+            <section class="text-center bg--dark">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="heading-block">
+                                <h2 class="type--uppercase">Follow for updates</h2>
+                            </div>
+                            <div class="instafeed" data-user-name="@SKYRHI" data-amount="6" data-grid="6"></div>
+                            <a class="btn btn--icon type--uppercase" href="https://www.instagram.com/skyrhi/">
+                                <span class="btn__text">
+                                    <i class="socicon socicon-instagram"></i>
+                                    Follow @skyrhi
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <!--end row-->
+                </div>
+                <!--end of container-->
+            </section>
+            {{>footer}}
+        </div>
+        <!--<div class="loader"></div>-->
+        <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
+            <i class="stack-interface stack-up-open-big"></i>
+        </a>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/flickity.min.js"></script>
+        <script src="js/easypiechart.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/typed.min.js"></script>
+        <script src="js/datepicker.js"></script>
+        <script src="js/isotope.min.js"></script>
+        <script src="js/ytplayer.min.js"></script>
+        <script src="js/lightbox.min.js"></script>
+        <script src="js/granim.min.js"></script>
+        <script src="js/jquery.steps.min.js"></script>
+        <script src="js/countdown.min.js"></script>
+        <script src="js/twitterfetcher.min.js"></script>
+        <script src="js/spectragram.min.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/scripts2.js"></script>
+    </body>
+</html>
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us15.list-manage.com","uuid":"a896d689418553270c34d6a08","lid":"c73d374fd7"}) })</script>

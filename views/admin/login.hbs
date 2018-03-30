@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Stack Multipurpose HTML Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Site Description Here">
+        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/jquery.steps.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="../css/theme.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body class=" ">
+        <a id="start"></a>
+        {{>adminnav}}
+        <div class="main-container">
+            <section class="height-100 imagebg text-center" data-overlay="4">
+                <div class="background-image-holder">
+                    <img alt="background" src="../img/fire4.jpg" />
+                </div>
+                <div class="container pos-vertical-center">
+                    <div class="row">
+                        <div class="col-sm-7 col-md-5">
+                            <h2>Login to continue{{token}}</h2>
+                            <!-- <p class="lead">
+                                Welcome back, sign in with your existing Stack account credentials
+                            </p> -->
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <input type="text" placeholder="Username" />
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <input type="password" placeholder="Password" />
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <button class="btn btn--primary type--uppercase" type="submit">Login</button>
+                                    </div>
+                                </div>
+                                <!--end of row-->
+                            </form>
+                            <span class="type--fine-print block">Dont have an account yet?
+                                <a href="page-accounts-create-1.html">Create account</a>
+                            </span>
+                            <span class="type--fine-print block">Forgot your username or password?
+                                <a href="page-accounts-recover.html">Recover account</a>
+                            </span>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+        </div>
+        <!--<div class="loader"></div>-->
+        <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
+            <i class="stack-interface stack-up-open-big"></i>
+        </a>
+        <script src="../js/jquery-3.1.1.min.js"></script>
+        <script src="../js/parallax.js"></script>
+        <script src="../js/scripts.js"></script>
+        <script src="../js/smooth-scroll.min.js"></script>
+        <script src="../js/js.cookie.js"></script>
+    </body>
+</html>
+<script>
+$(function () {
+  urlstring='http://localhost:8088/user/login';
+  console.log("function ran");
+
+  var data = {};
+	data.username = "mstahlmann";
+	data.password = "Titus115!";
+	$.ajax({
+		type: 'POST',
+		data: JSON.stringify(data),
+  
+	  contentType: 'application/json',
+    url: urlstring,
+    success: function(data) {
+      console.log('success');
+      console.log(JSON.stringify(data));
+      console.log(data.token);
+      Cookies.set('shyrhiAdmin', data.token, { expires: 7 });
+    },
+    error:function(data){
+      console.log("failed",data);
+    }
+  });
+});
+
+
+</script>
