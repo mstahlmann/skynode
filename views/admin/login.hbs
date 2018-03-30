@@ -28,16 +28,16 @@
                             <!-- <p class="lead">
                                 Welcome back, sign in with your existing Stack account credentials
                             </p> -->
-                            <form>
+                            <form id="loginForm">
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <input type="text" placeholder="Username" />
+                                        <input type="text" placeholder="Username" id="username" />
                                     </div>
                                     <div class="col-sm-12">
-                                        <input type="password" placeholder="Password" />
+                                        <input type="password" placeholder="Password" id="password"/>
                                     </div>
                                     <div class="col-sm-12">
-                                        <button class="btn btn--primary type--uppercase" type="submit">Login</button>
+                                        <button class="btn btn--primary type--uppercase" type="submit" id="loginSubmit">Login</button>
                                     </div>
                                 </div>
                                 <!--end of row-->
@@ -68,16 +68,25 @@
 </html>
 <script>
 $(function () {
-  urlstring='http://localhost:8088/user/login';
+
+});
+$("#loginForm").submit((e)=>{
+  e.preventDefault();
+  console.log("submit clicked");
+  urlstring='http://localhost:8080/api/login';
   console.log("function ran");
 
   var data = {};
-	data.username = "mstahlmann";
-	data.password = "Titus115!";
+	// data.username = "mstahlmann";
+	// data.password = "Titus115!";
+
+  data.username = $("#username").val();
+	data.password = $("#password").val();
+
 	$.ajax({
 		type: 'POST',
 		data: JSON.stringify(data),
-  
+    xhrFields: { withCredentials: true },
 	  contentType: 'application/json',
     url: urlstring,
     success: function(data) {
@@ -85,6 +94,7 @@ $(function () {
       console.log(JSON.stringify(data));
       console.log(data.token);
       Cookies.set('shyrhiAdmin', data.token, { expires: 7 });
+      window.location.href = "./"
     },
     error:function(data){
       console.log("failed",data);

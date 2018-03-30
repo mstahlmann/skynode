@@ -15,6 +15,7 @@ var home      = require('./routes/home.js');
 var about     = require('./routes/about.js');
 var music     = require('./routes/music.js');
 var login     = require('./routes/admin/login.js');
+var userdata  = require('./routes/api/userdata.js');
 
 hbs.registerPartials(__dirname + '/views/partials');//register page paritals
 
@@ -25,6 +26,3 @@ app.use('/',express.static(__dirname + '/views'));//set express framework
 app.listen(config.port,()=>{
   console.log('started on port 80, exposed to port 8088');
 });
-
-
-
